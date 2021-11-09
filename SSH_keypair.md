@@ -1,6 +1,6 @@
 ﻿#### Hướng dẫn cách tạo Keypair
 
-# 1. TOPO LAP
+# 1. TOPO LAB
 - Giả lập trên VMware Workstation.
 - Centos 7 Minimal-2009 Server 64 bit.
 - Cần có 2 máy: Client và Server.
