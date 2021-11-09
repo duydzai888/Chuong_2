@@ -14,26 +14,26 @@ Khi kết nối được yêu cầu thì chương trình SSH Client sẽ gửi P
 
 Để xác thực được bằng `Keys pair`trước tiên ta phải tạo ra cặp keys đó với lệnh: `ssh-keygen -t rsa`
 ```
-[root@laiduy ~]# ssh-keygen -t rsa
+[root@client ~]# ssh-keygen -t rsa
 
 ```
 Tham số `rsa`tức là cặp khóa này được tạo ra bằng thuật toán RSA.
 Sau khi nhập xong dòng lệnh trên và ấn Enter thì dòng đầu tiên họ sẽ hỏi ta muốn lưu cặp Keys này ở đâu. Tại đây nếu muốn lưu mặc định thì chỉ cần ấn Enter 
 ```
-[root@laiduy ~]# ssh-keygen -t rsa
+[root@client ~]# ssh-keygen -t rsa
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa): 
 ```
 Sau đó thì họ sẽ yêu cầu điền `passphrase` nhằm bảo mật cặp Keys pair để an toàn hơn vì dù keys bị người khác biết Keys thì khi đăng nhập vào máy sẽ hỏi `passphrase`
 ```
-[root@laiduy ~]# ssh-keygen -t rsa
+[root@client ~]# ssh-keygen -t rsa
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa): 
 Enter passphrase (empty for no passphrase):
 ```
 Sau khi hoàn thành xong thì giao diện sẽ có dạng: 
 ```
-[root@laiduy ~]# ssh-keygen -t rsa
+[root@client ~]# ssh-keygen -t rsa
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
@@ -57,7 +57,7 @@ The key's randomart image is:
 ```
 Và theo như đường dẫn thì `Keys pair` của mình sẽ nằm trong đường dẫn là `/root/.ssh`. Ta có thể check lại bằng lệnh `ls -l /root/.ssh`
 ```
-[root@laiduy ~]# ls -l /root/.ssh
+[root@client ~]# ls -l /root/.ssh
 total 12
 -rw-------. 1 root root 1766 Sep 20 04:54 id_rsa
 -rw-r--r--. 1 root root  393 Sep 20 04:54 id_rsa.pub
@@ -68,11 +68,11 @@ Tại đây ta có thể thấy 2 file là `id_rsa` và `id_rsa.pub`.
 - File `id_rsa.pub` là file Public Key và sever sẽ giữ file này
  Trong cấu hình SSH thì `Public key`được lưu trong file là `authorized_keys` nên ta sẽ tiến hành đổi tên file:
  ```
-[root@laiduy ~]# mv /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
+[root@client ~]# mv /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
 ```
 Tiếp theo ta sẽ lấy file `id_rsa` về, dùng lệnh `cat /root/.ssh/id_rsa`:
 ```
-[root@laiduy ~]# cat /root/.ssh/id_rsa
+[root@client ~]# cat /root/.ssh/id_rsa
 -----BEGIN RSA PRIVATE KEY-----
 Proc-Type: 4,ENCRYPTED
 DEK-Info: AES-128-CBC,BF2BA2B5B4B29FCA52F3FA3411AC7359
@@ -108,7 +108,7 @@ Ta sẽ Coppy nội dung của file này, sau đó tại màn hình desktop ta t
 
 Tiếp theo ta sẽ đổi file cấu hình SSH để bắt buộc xác thực sử dụng `Keys pair`. Ta tiến hành truy cập tệp SSH bằng công cụ `vi`để chỉnh sửa file: 
 ```
-[root@laiduy ~]# vi /etc/ssh/sshd_config
+[root@client ~]# vi /etc/ssh/sshd_config
 ```
 Tìm dòng `#PubkeyAuthentication yes`, tại đây ta xóa dấu `#` vì nếu có dấu `#` tức là dòng này đang bị vô hiệu hóa. Sau đó ta thoát và lưu file lại.
 
