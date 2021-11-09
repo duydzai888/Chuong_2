@@ -133,8 +133,8 @@ Giờ ta kết thúc phiên đăng nhập này và SSH lại. Sau khi nhập xon
 Vậy là ta đã SSH thành công với **Keys Pair** vừa tạo
 
 #### Mô hình minh họa
-![Mô hình](keypair.png)
+![keypair](https://user-images.githubusercontent.com/84270045/140883723-306a72a8-84a1-4cc9-aa78-dc93f7a17d09.png)
 
-![](planning.png)
+![planning](https://user-images.githubusercontent.com/84270045/140883511-06e5f7dd-4d43-42d9-adaf-d4af692ab885.png)
 
 
