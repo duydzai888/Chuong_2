@@ -118,7 +118,7 @@ IRBZ7ce/+BIoY0ECr2Ahqqai0zlmwIX9NHqjpB0c+pgr0+rrIJa/9n9vIPKNOAuv
 -----END RSA PRIVATE KEY-----
 ```
 - Ta sẽ Coppy nội dung của file này, sau đó tại màn hình desktop của máy vật lí ta tạo 1 file text mới và Paste nội dung vừa Coppy vào và lưu lại.
-#### Cấu hình đăng nhập bằng Keyspair
+### Cấu hình đăng nhập bằng Keyspair
 - Tiếp theo ta sẽ đổi file cấu hình SSH để bắt buộc xác thực sử dụng `Keys pair`. Ta tiến hành truy cập tệp SSH bằng công cụ `vi`để chỉnh sửa file: 
 ```
 [root@client ~]# vi /etc/ssh/sshd_config
@@ -126,6 +126,9 @@ IRBZ7ce/+BIoY0ECr2Ahqqai0zlmwIX9NHqjpB0c+pgr0+rrIJa/9n9vIPKNOAuv
 - Tìm dòng `#PubkeyAuthentication yes`, tại đây ta xóa dấu `#` vì nếu có dấu `#` tức là dòng này đang bị vô hiệu hóa. Sau đó ta thoát và lưu file lại.
 ### Đẩy Key Public từ `Client` sang `Server`
 - Để thực hiện, ta sử dụng lệnh `ssh-copy-id root@(địa chỉ của máy Server)`.  
+```
+[root@client ~]# ssh-copy-id root@192.168.124.132
+```
 ### SSH từ Client sang Server để kiểm tra việc thực hiện lệnh Copy thành công hay không.
 Để có thể SSH sang Server ngay tại Client, ta sử dụng lệnh: `ssh root@(địa chỉ của máy Server)`
 ```
