@@ -150,7 +150,7 @@ dr-xr-x---. 3 root root 147 Oct 31 23:54 ..
 - Tại đây ta thấy file tên `authorized_keys` tức là lệnh `copy` ở trên đã thành công.
 
 ### 4.3. SSH bằng Keyspair
-![ssh](https://user-images.githubusercontent.com/84270045/140910189-e1ad93ff-6bf8-467c-b364-55f33c789049.png)
+![ssh](https://user-images.githubusercontent.com/84270045/140914686-eb7bcf50-1247-4760-b1ce-0a89d352bd2b.png)
 - Giờ ta kết thúc phiên đăng nhập này và SSH lại. Sau khi nhập xong địa chỉ IP, ta chọn `Advanced SSH settings` và chọn mục `Use privatekey`. Sau đó ta sẽ chọn file text mà ta đã lưu từ trước bỏ vào và ấn `OK`. Sau khi ấn Enter thì máy sẽ bắt ta nhập `passphrase` mà ta đã tạo trước đó. Tiếp theo phần `login as` thì ta sẽ nhập User name và sau đó ấn Enter.
 
 #### Vậy là ta đã SSH thành công với *Keys Pair* vừa tạo
