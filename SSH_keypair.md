@@ -5,7 +5,7 @@
 - Centos 7 Minimal-2009 Server 64 bit.
 - Cần có 2 máy: Client và Server.
 # 2. MÔ HÌNH
-![keypair](https://user-images.githubusercontent.com/84270045/140883723-306a72a8-84a1-4cc9-aa78-dc93f7a17d09.png)
+![mô hình](https://user-images.githubusercontent.com/84270045/141088402-a597b6a3-03f8-4195-9dc8-d7286faa254e.png)
 # 3. IP PLANNING
 ![ip planning](https://user-images.githubusercontent.com/84270045/140905424-d7437509-5d27-4954-a083-0a15e4d21993.png)
 # 4. Các bước thực hiện
